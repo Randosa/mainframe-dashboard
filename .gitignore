@@ -1,0 +1,9 @@
+node_modules/
+data/
+secrets/
+.env
+*.log
+test-output/
+test-output-*/
+# Local verification images contain machine-specific names; keep them private.
+docs/*.jpg

@@ -1,0 +1,10 @@
+{
+  "name": "mainframe-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": { "start": "node src/server.js", "test": "node --test", "preview": "node src/server.js --demo" },
+  "packageManager": "pnpm@11.25.0",
+  "dependencies": { "@webtui/css": "0.1.10", "ssh2": "1.17.0" }
+}

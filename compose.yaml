@@ -1,0 +1,18 @@
+services:
+  mainframe-dashboard:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${MAINFRAME_BIND_IP:-127.0.0.1}:${MAINFRAME_PORT:-3000}:3000"
+    environment:
+      COOKIE_SECURE: "${COOKIE_SECURE:-false}"
+    volumes:
+      - mainframe-data:/data
+      - mainframe-secrets:/secrets
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    tmpfs: [/tmp]
+volumes:
+  mainframe-data:
+  mainframe-secrets:
